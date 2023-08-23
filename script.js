@@ -1,13 +1,6 @@
 // Model
 
 const app = document.getElementById("app");
-/* const restrict = new RegExp("^[<>+=]*$"); */
-
-const IMAGES = {
-    "=": "equal.png",
-    "<": "less-than.png",
-    ">": "greater-than.png"
-};
 
 let points = 0;
 let number1 = randomNumber(1, 10);
@@ -75,7 +68,6 @@ function resetGame() {
 
 function submitAnswer() {
     let userInput = document.getElementById("user-input").value;
-    console.log(userInput);
     if (userInput === "") return;
     userInput === ans ? points++ : points--;
     generateNewNumbers();
