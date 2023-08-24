@@ -9,7 +9,7 @@ let ans = getCorrectSymbol(number1, number2);
 
 // View
 
-function updateView(submit = false) {
+function updateView() {
     app.innerHTML = /*html*/ `
         <div class="image-container">
             <img src="equal.png" alt="Crocodile" class="crocodile">
@@ -37,7 +37,7 @@ updateView();
 function checkCrocodile() {
     inputElement === ans ? points++ : points--;
     generateNewNumbers();
-    updateView(submit = true);
+    updateView();
 }
 
 function randomNumber(min, max) {
@@ -45,12 +45,13 @@ function randomNumber(min, max) {
 }
 
 function getCorrectSymbol(x, y) {
-    if (x > y) {
-        return ">";
-    } else if (x < y) {
-        return "<";
-    } else {
-        return "=";
+    switch (true) {
+        case (x > y):
+            return ">";
+        case (x < y):
+            return "<";
+        case (x === y):
+            return "=";
     }
 }
 

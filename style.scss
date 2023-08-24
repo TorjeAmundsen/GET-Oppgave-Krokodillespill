@@ -75,11 +75,8 @@ body {
 
 .button-container {
     button {
-        user-select: none;
-        color: var(--text-color);
         width: 5rem;
         height: 1.8rem;
-        margin: 5px 5px 5px 5px;
         background: rgba(255, 255, 255, 0.05);
         border: none;
         border-radius: 5px;
@@ -92,6 +89,4 @@ body {
             transform: scale(98%);
         }
     }
-    margin: 1rem 1rem;
-    display: flex;
 }
